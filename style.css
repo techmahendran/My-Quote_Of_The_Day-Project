@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #778ff3ce;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Quote_container {
+    width: 500px;
+    background-color:#fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px 2px rgba(0,0,0,0.3);
+}
+.Quote_container h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 0px;
+    text-transform: capitalize;
+}
+.content {
+    border-bottom: 1px solid grey;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+   
+}
+.quote_area {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+.quote_area p {
+    text-align: center;
+}
+.quote_area i:last-child {
+    display: flex;
+    align-items:flex-end;
+}
+.right_icon {
+    display: flex;
+    justify-content: end;
+}
+
+.author_name {
+    text-align: right;
+}
+.btns {
+    width: 200px;
+    display: flex;
+    align-items: center;
+}
+.btns button {
+    border: 2px solid #5372F0;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: #5372F0;
+   
+}
+.btns button:hover {
+    background-color: #5372F0;
+    color: #fff;
+}
+button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    outline: none;
+}
+.twit img {
+    width: 10px;
+    height: 10px;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+button.speak, button.copy_text {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in;
+}
+.quote_btn {
+    background-color: #5372F0;
+    padding: 10px 15px;
+    border-radius: 15px;
+    color: #fff;
+    cursor: pointer;
+}
+.quote_btn button {
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+}
+.quote_btn.loading {
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+/* media screen */
+
+@media  (max-width: 768px) {
+    .Quote_container {
+        width: 400px;
+        padding: 1.5rem;
+    }
+    .Quote_container h2{
+        font-size: 1.7rem;
+    }
+    p.quote {
+        font-size: 15px;
+    }
+    .author_name {
+        font-size: 15px;
+    }
+    button.speak, button.copy_text {
+        height: 30px;
+        width: 30px;
+    }
+    .quote_btn {
+        padding: 8px 8px;
+        width: 105px;
+    }
+    .quote_btn button{
+        font-size: 15px;
+    }
+}
+
+@media (max-width:500px) {
+    .Quote_container {
+        width: 300px;
+    }
+    .Quote_container h2 {
+        font-size: 1.5rem;
+    }
+    p.quote {
+        font-size: 14px;
+    }
+    .author_name {
+        font-size: 14px;
+    }
+    .btns button {
+        padding: 3px;
+    }
+    .quote_btn {
+        padding: 7px 7px;
+        width: 140px;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .quote_btn button {
+        font-size: 14px;
+    }
+}
