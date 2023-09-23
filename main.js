@@ -4,10 +4,12 @@ const author_name = document.querySelector('.author');
 // btns
 const speak = document.querySelector('.speak');
 const copy_text = document.querySelector('.copy_text');
+const twit_note = document.querySelector(".twit_note");
 
 quote_btn.addEventListener('click', randamQuote)
 speak.addEventListener('click', speakText)
 copy_text.addEventListener('click', copyText)
+twit_note.addEventListener("click", twitNote);
 
 // randamQuote run on api
 async function randamQuote() {
@@ -30,4 +32,10 @@ function speakText() {
 function copyText() {
     // copy the quote text
     navigator.clipboard.writeText(quoteText.innerHTML)
+}
+
+// opening twitter new tab for quoteText
+function twitNote() {
+  let tweetUrl = `https://twitter.com/intent/tweet?url=${quoteText.innerHTML}`;
+  window.open(tweetUrl, "_blank");
 }
